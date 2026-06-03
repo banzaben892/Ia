@@ -2,25 +2,49 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mini ChatGPT Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mini AI Assistant</title>
+
+  <!-- STYLE -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
 
-  <div class="header">🤖 Mini AI Assistant</div>
+  <!-- HEADER -->
+  <header class="header">
+    🤖 <span>Mini AI Assistant</span>
+  </header>
 
-  <div id="chatBox" class="chat-box"></div>
+  <!-- CHAT AREA -->
+  <main id="chatBox" class="chat-box">
+    <!-- messages injectés ici -->
+  </main>
 
-  <div class="input-area">
-    <input id="input" placeholder="Écris ton message...">
-    <button onclick="sendMessage()">Envoyer</button>
-  </div>
+  <!-- INPUT AREA -->
+  <footer class="input-area">
+
+    <input 
+      id="input" 
+      type="text"
+      placeholder="Écris ton message..."
+      autocomplete="off"
+      onkeydown="if(event.key==='Enter') sendMessage()"
+    >
+
+    <button onclick="sendMessage()">
+      ➤
+    </button>
+
+  </footer>
 
 </div>
 
+<!-- SCRIPTS -->
 <script src="data/memory.js"></script>
 <script src="ai/ia1.js"></script>
 <script src="ai/rules.js"></script>
@@ -28,4 +52,4 @@
 <script src="app.js"></script>
 
 </body>
-      </html>
+</html>
