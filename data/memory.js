@@ -1,0 +1,3 @@
+let memory = {
+  name: null
+};
